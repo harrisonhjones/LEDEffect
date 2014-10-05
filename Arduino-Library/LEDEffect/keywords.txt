@@ -1,0 +1,8 @@
+LEDEffect   KEYWORD1
+update    KEYWORD2
+off     KEYWORD2
+on     KEYWORD2
+breath     KEYWORD2
+fadeDown     KEYWORD2
+fadeUp     KEYWORD2
+blink     KEYWORD2
