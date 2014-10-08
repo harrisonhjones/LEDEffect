@@ -9,20 +9,13 @@
 */
 
 #include <LEDEffect.h>
-
-LEDEffect led1(7);
-LEDEffect led2(13);
-
-unsigned long time;
+LEDEffect led2(13);	// Use onboard LED
+unsigned long time = 0;
 int ledState = 0;
+void setup()  {}
 
-// the setup routine runs once when you press reset:
-void setup()  {
-}
-
-// the loop routine runs over and over again forever:
 void loop()  {
-	if(millis() > time + 5000)
+	if(millis() > time + 5000)	// Every 5 seconds change between states
 	{    
 		time = millis();
 		if(ledState == 0)

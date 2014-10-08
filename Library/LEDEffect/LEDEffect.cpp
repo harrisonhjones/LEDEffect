@@ -3,6 +3,7 @@
 	Created by Harrison H. Jones, October 3, 2014.
 */
 
+// Required for Arduino Library only
 #include "Arduino.h"
 #include "LEDEffect.h"
 
