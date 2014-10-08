@@ -1,4 +1,4 @@
-LED-Effects
+LEDEffect
 ===========
 
 A simple library for Arduino which allows for different LED effects
@@ -12,7 +12,7 @@ A simple library for Arduino which allows for different LED effects
 * Add Library/LEDEffect/LEDEffect.cpp and Library/LEDEffect/LEDEffect.h to your project
 * Edit LEDEffect.cpp. Commented out ```#include "Arduino.h"```
 * Edit LEDEffect.h. Commented out ```#include "Arduino.h"```
-* Edit LEDEffect.h. Uncomment out ```#include "application.h"```
+* Edit LEDEffect.h. Uncomment ```#include "application.h"```
 
 # Usage
 
