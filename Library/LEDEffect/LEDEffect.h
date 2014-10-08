@@ -7,9 +7,9 @@
 #define LEDEffect_h
 
 // Required for Arduino Library only
-//#include "Arduino.h"
+#include "Arduino.h"
 // Required for SparkCore Library only
-#include "application.h"
+//#include "application.h"
 
 class LEDEffect
 {

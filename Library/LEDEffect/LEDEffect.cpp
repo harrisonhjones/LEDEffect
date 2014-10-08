@@ -3,7 +3,7 @@
 	Created by Harrison H. Jones, October 3, 2014.
 */
 
-//#include "Arduino.h"
+#include "Arduino.h"
 #include "LEDEffect.h"
 
 LEDEffect::LEDEffect(int pin)
