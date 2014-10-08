@@ -3,7 +3,7 @@
 	Created by Harrison H. Jones, October 3, 2014.
 */
 
-#include "Arduino.h"
+//#include "Arduino.h"
 #include "LEDEffect.h"
 
 LEDEffect::LEDEffect(int pin)
@@ -53,17 +53,18 @@ void LEDEffect::update()
 			if (_brightness == 255)
 				_brightness = 0;
 		}
-		if(_ledState == 5)
+		else if(_ledState == 5)
 		{
 			if(_brightness == 255)
 				_brightness = 0;
 			else
 				_brightness = 255;
 		}
-		// set the _brightness of pin 9:
-		analogWrite(_pin, _brightness);      
+		else if(_ledState == 6) // Dim
+		{
+		}
 	}
-
+    analogWrite(_pin, _brightness);  
 }
 void LEDEffect::off()
 {
@@ -79,24 +80,28 @@ void LEDEffect::on()
 
 void LEDEffect::breath(int ledDelay)
 {
-	_brightness = 0;
-	_fadeDirection = _fadeAmount;
+    if(_brightness == 0)
+        _fadeDirection = _fadeAmount;
+    else if(_brightness == 255)
+        _fadeDirection = -_fadeAmount;
 	_ledState = 2;
 	_ledDelay = ledDelay;
 }
 
 void LEDEffect::fadeDown(int ledDelay)
 {
-	_brightness = 255;
-	_fadeDirection = -_fadeAmount;
+    if(_brightness == 0)
+        _brightness = 255;
+    _fadeDirection = -_fadeAmount;
 	_ledState = 3;
 	_ledDelay = ledDelay;
 }
 
 void LEDEffect::fadeUp(int ledDelay)
 {
-	_brightness = 0;
-	_fadeDirection = _fadeAmount;
+    if(_brightness == 255)
+        _brightness = 0;
+    _fadeDirection = _fadeAmount;
 	_ledState = 4;
 	_ledDelay = ledDelay;
 }
@@ -105,4 +110,11 @@ void LEDEffect::blink(int ledDelay)
 {
 	_ledState = 5;
 	_ledDelay = ledDelay;
+}
+
+void LEDEffect::dim(unsigned char brightness)
+{
+    _ledState = 6;
+    _brightness = brightness;
+    _ledDelay = 1000;   // Not really required. 
 }

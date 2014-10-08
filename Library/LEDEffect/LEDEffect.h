@@ -6,7 +6,10 @@
 #ifndef LEDEffect_h
 #define LEDEffect_h
 
-#include "Arduino.h"
+// Required for Arduino Library only
+//#include "Arduino.h"
+// Required for SparkCore Library only
+#include "application.h"
 
 class LEDEffect
 {
@@ -19,12 +22,13 @@ class LEDEffect
 	void fadeDown(int ledDelay);
 	void fadeUp(int ledDelay);
 	void blink(int ledDelay);
+	void dim(unsigned char brightness);
   private:
 	int _pin;
-	int _brightness;
-	int _fadeAmount;    // how many points to fade the LED by
-	int _fadeDirection; 
-	int _ledState;     // 0 = off, 1 = on, 2 = breath, 3 = fade down, 4 = fade up, 5 = blink
+	unsigned char _brightness;
+	unsigned char _fadeAmount;    // how many points to fade the LED by
+	unsigned char _fadeDirection; 
+	unsigned char _ledState;     // 0 = off, 1 = on, 2 = breath, 3 = fade down, 4 = fade up, 5 = blink
 	int _ledDelay; // in ms
 	unsigned long _time;
 };
