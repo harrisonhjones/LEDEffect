@@ -10,30 +10,9 @@ A simple library for Arduino which allows for different LED effects
 ## SparkCore
 
 * Add Library/LEDEffect/LEDEffect.cpp and Library/LEDEffect/LEDEffect.h to your project
-
-* Edit LEDEffect.cpp. Replace
-
-    // Required for Arduino Library only
-    #include "Arduino.h"
-
-with
-
-    // Required for Arduino Library only
-    //#include "Arduino.h"
-
-* Edit LEDEffect.h. Replace
-
-    // Required for Arduino Library only
-    #include "Arduino.h"
-    // Required for SparkCore Library only
-    //#include "application.h"
-
-with
-
-    // Required for Arduino Library only
-    //#include "Arduino.h"
-    // Required for SparkCore Library only
-    #include "application.h"
+* Edit LEDEffect.cpp. Commented out ```#include "Arduino.h"```
+* Edit LEDEffect.h. Commented out ```#include "Arduino.h"```
+* Edit LEDEffect.h. Uncomment out ```#include "application.h"```
 
 # Usage
 
