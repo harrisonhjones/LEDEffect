@@ -21,7 +21,7 @@ LEDEffect::LEDEffect(int pin)
 
 void LEDEffect::update()
 {
-	if(millis() > _time + _ledDelay)
+	if((millis() - _time) > _ledDelay)
 	{
 		_time = millis();
 		if(_ledState == 0)
