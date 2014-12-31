@@ -3,8 +3,16 @@
 	Created by Harrison H. Jones, October 3, 2014.
 */
 
-// Required for Arduino Library only
+#if defined (SPARK)
+#include "application.h"
+#else
+#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
+#endif
+
 #include "LEDEffect.h"
 
 LEDEffect::LEDEffect(int pin)
