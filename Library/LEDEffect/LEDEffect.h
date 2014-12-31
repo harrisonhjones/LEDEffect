@@ -6,10 +6,15 @@
 #ifndef LEDEffect_h
 #define LEDEffect_h
 
-// Required for Arduino Library only
+#if defined (SPARK)
+#include "application.h"
+#else
+#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-// Required for SparkCore Library only
-//#include "application.h"
+#else
+#include "WProgram.h"
+#endif
+#endif
 
 class LEDEffect
 {
