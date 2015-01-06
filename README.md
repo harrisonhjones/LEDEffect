@@ -1,7 +1,7 @@
 LEDEffect
 ===========
 
-A simple library for Arduino which allows for different LED effects
+A simple library for different LED effects
 
 # Installation
 ## Arduino
