@@ -5,11 +5,13 @@ A simple library for different LED effects
 
 # Installation
 ## Arduino
-* Copy the Library/LEDEffect into your Arduino libraries folder
+
+1. Download the library (click "Clone or download" then click the "Download ZIP" button) as a .zip.
+1. In the Arduino IDE's select "Sketch" then "Include Library" then "Add .ZIP Library" and select the downloaded .zip.
 
 ## SparkCore
 
-* Add Library/LEDEffect/LEDEffect.cpp and Library/LEDEffect/LEDEffect.h to your project
+1. Add LEDEffect.cpp and LEDEffect.h to your project.
 
 # Usage
 
